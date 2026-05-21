@@ -225,6 +225,96 @@
       opacity: 0.6;
     }
 
+    /* ── Experience Timeline ── */
+    .exp-timeline-section {
+      padding: 80px 5%;
+      background: #fff;
+    }
+    .exp-timeline-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .exp-bio-intro {
+      max-width: 720px;
+      margin-bottom: 64px;
+    }
+    .exp-bio-intro p {
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.85;
+      margin: 0 0 16px 0;
+    }
+    .exp-bio-intro .sidebar-block {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid #e8e8e8;
+    }
+    .exp-bio-intro .sidebar-label {
+      font-family: Montserrat, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    .exp-bio-intro .sidebar-val {
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+      border-left: 3px solid #C9A961;
+    }
+    .timeline-item {
+      position: relative;
+      padding: 0 0 48px 32px;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #C9A961;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #C9A961;
+    }
+    .tl-period {
+      font-family: Montserrat, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #C9A961;
+      margin-bottom: 6px;
+    }
+    .tl-role {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #000;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .tl-company {
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #666;
+      line-height: 1.5;
+    }
+
     /* ── Shared: CTA + footer ── */
     .section-cta {
       background: #000;
@@ -329,6 +419,7 @@
           </div>
           <a href="styleguide.html" class="navigation-item w-nav-link">Contact</a>
         </nav>
+        <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-weight:700;font-family:Montserrat,sans-serif;font-size:13px;padding:10px 24px;border-radius:4px;text-decoration:none;white-space:nowrap;margin-left:16px;">Schedule a Call</a>
         <div class="menu-button w-nav-button">
           <img src="images/menu-icon_1menu-icon.png" width="22" alt="" class="menu-icon">
         </div>
@@ -352,33 +443,76 @@
     </div>
   </section>
 
-  <!-- BIO -->
-  <section style="padding: 80px 5%;">
-    <div class="about-bio-grid" style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr; gap:80px; align-items:start;">
-      <div class="bio-text">
-        <p>I'm an Operations and Technical Programs leader with 13 years of experience delivering complex programs at companies that include Google, Cloud Posse, and Brooklyn Jewelers.</p>
-        <p>Most recently, I was hired as Chief Operating Officer at Brooklyn Jewelers in New York. The engagement is currently on pause due to the founder's family circumstances, so I'm exploring my next COO or Head of Operations role.</p>
-        <p>Before BKJ, I spent three years at Cloud Posse, an AWS Premier Partner DevOps consultancy. I was the sole Technical Project Manager, reporting directly to the CEO with cross-functional ownership across delivery, vendor partnerships, the AWS Partner Network, and operating cadence. I led the company's migration from Jira to Linear and ran client delivery across multiple concurrent engagements.</p>
-        <p>Earlier, I led HexClad Cookware's site redesign at Vaan and FLEO's headless commerce migration at The Form Factory. I started my career at Google Brazil, where I led production of "All Brazil Plays" for the Rio 2016 Olympics, coordinating Google Brazil, MediaMonks (Netherlands), and the US-based management team.</p>
-        <p>I hold a Bachelor's in Communication and Advertising from Universidade de São Paulo, with coursework in Digital Media at the University of New South Wales.</p>
+  <!-- BIO + TIMELINE -->
+  <section class="exp-timeline-section">
+    <div class="exp-timeline-inner">
+      <div class="exp-bio-intro">
+        <p>I'm an Operations and Technical Programs leader with 13 years delivering complex programs at companies that include Google, Cloud Posse, and Brooklyn Jewelers. I bridge strategy and execution — building the systems, teams, and processes that make ambitious things ship.</p>
+        <p>Most recently COO at Brooklyn Jewelers (NYC), currently exploring my next COO or Head of Operations role while building Glutify, a fitness app for women.</p>
+        <div class="sidebar-block">
+          <div>
+            <div class="sidebar-label">Location</div>
+            <div class="sidebar-val">Ubatuba, SP · Brazil<br>GMT-3 · Remote-first</div>
+          </div>
+          <div>
+            <div class="sidebar-label">Open to</div>
+            <div class="sidebar-val">COO · Head of Operations<br>Senior TPM</div>
+          </div>
+          <div>
+            <div class="sidebar-label">Education</div>
+            <div class="sidebar-val">USP · Bachelor's, Advertising<br>UNSW · Coursework, Digital Media</div>
+          </div>
+          <div>
+            <div class="sidebar-label">Languages</div>
+            <div class="sidebar-val">Portuguese (Native)<br>English (Fluent)</div>
+          </div>
+        </div>
       </div>
-      <div class="bio-sidebar">
-        <div class="sidebar-block">
-          <div class="sidebar-label">Location</div>
-          <p>Ubatuba, SP · Brazil<br>GMT-3 · Remote-first</p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="tl-period">Apr 2026 – Present</div>
+          <div class="tl-role">COO <span style="font-weight:400;color:#999;">(on pause)</span></div>
+          <div class="tl-company">Brooklyn Jewelers LLC · New York · Remote</div>
         </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Open to</div>
-          <p>COO, Head of Operations,<br>Senior Technical Program Management</p>
+
+        <div class="timeline-item">
+          <div class="tl-period">May 2023 – Mar 2026</div>
+          <div class="tl-role">Technical Project Manager</div>
+          <div class="tl-company">Cloud Posse · AWS Premier Partner · Remote (US)</div>
         </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Education</div>
-          <p>Universidade de São Paulo<br>Bachelor's, Advertising &amp; Communication<br><br>University of New South Wales<br>Coursework, Digital Media<br><br>AWS Sales Accreditation · 2023</p>
+
+        <div class="timeline-item">
+          <div class="tl-period">Feb 2022 – Jun 2022</div>
+          <div class="tl-role">Project &amp; Account Manager</div>
+          <div class="tl-company">HexClad via Vaan Agency</div>
         </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Languages</div>
-          <p>Portuguese (Native)<br>English (Fluent)</p>
+
+        <div class="timeline-item">
+          <div class="tl-period">Sep 2021 – Feb 2022</div>
+          <div class="tl-role">Project Manager</div>
+          <div class="tl-company">The Form Factory · Projects: Fleo, Nomad, and others</div>
         </div>
+
+        <div class="timeline-item">
+          <div class="tl-period">2016 – 2021</div>
+          <div class="tl-role">Founder &amp; Digital Marketing</div>
+          <div class="tl-company">GABI808 · Own Agency · São Paulo</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-period">Jul 2015 – Jul 2016</div>
+          <div class="tl-role">Digital Production Manager</div>
+          <div class="tl-company">Google Brazil · Rio 2016 Olympics</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-period">2013 – 2015</div>
+          <div class="tl-role">Digital Producer</div>
+          <div class="tl-company">Agencies · São Paulo</div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -410,15 +544,30 @@
   <section class="about-trusted">
     <div class="section-label">Trusted by</div>
     <div class="logos-row">
-      <img src="images/Google-logo-black.webp" alt="Google"
-        srcset="images/Google-logo-black-p-500.webp 500w, images/Google-logo-black.webp 2560w">
-      <img src="images/UNSW.png" alt="UNSW"
-        srcset="images/UNSW-p-500.png 500w, images/UNSW.png 1164w">
-      <img src="images/vaan.png" alt="Vaan">
-      <img src="images/HexClad-Logo.jpg" alt="HexClad"
-        srcset="images/HexClad-Logo-p-500.jpg 500w, images/HexClad-Logo.jpg 710w">
-      <img src="images/usp-logo.png" alt="USP"
-        srcset="images/usp-logo-p-500.png 500w, images/usp-logo-p-800.png 800w, images/usp-logo.png 4096w">
+      <!-- Google -->
+      <img src="images/Google-logo-black.webp" alt="Google" style="height:32px;width:auto;filter:grayscale(100%);opacity:0.6;" srcset="images/Google-logo-black-p-500.webp 500w, images/Google-logo-black.webp 2560w">
+      <!-- Cloud Posse -->
+      <img src="images/cloud-posse-logo.png" alt="Cloud Posse" style="height:32px;width:auto;filter:grayscale(100%);opacity:0.6;">
+      <!-- Vanguard (inline SVG) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" style="height:32px;width:auto;opacity:0.5;" aria-label="Vanguard">
+        <text x="0" y="28" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#000" letter-spacing="1">VANGUARD</text>
+      </svg>
+      <!-- Bread Financial -->
+      <img src="images/bread-financial-logo.png" alt="Bread Financial" style="height:32px;width:auto;filter:grayscale(100%);opacity:0.6;">
+      <!-- HexClad -->
+      <img src="images/HexClad-Logo.jpg" alt="HexClad" style="height:32px;width:auto;filter:grayscale(100%);opacity:0.6;" srcset="images/HexClad-Logo-p-500.jpg 500w, images/HexClad-Logo.jpg 710w">
+      <!-- UNSW (text logo) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" style="height:32px;width:auto;opacity:0.5;" aria-label="UNSW">
+        <text x="0" y="28" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#000" letter-spacing="2">UNSW</text>
+      </svg>
+      <!-- Vaan (text logo) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40" style="height:32px;width:auto;opacity:0.5;" aria-label="Vaan">
+        <text x="0" y="28" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#000" letter-spacing="3">VAAN</text>
+      </svg>
+      <!-- USP (text logo) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" style="height:32px;width:auto;opacity:0.5;" aria-label="USP">
+        <text x="0" y="28" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#000" letter-spacing="2">USP</text>
+      </svg>
     </div>
   </section>
 
@@ -431,12 +580,17 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer-new">
-    <div class="footer-copy">&copy; 2026 Gabriela Campana</div>
-    <div class="footer-links-new">
-      <a href="https://www.linkedin.com/in/gabriela-campana-9085b732/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:gscampana@gmail.com">Email</a>
-      <a href="https://github.com/GabisCampana" target="_blank" rel="noopener">GitHub</a>
+  <footer class="footer-new" style="flex-direction:column;align-items:center;gap:0;">
+    <div style="width:100%;text-align:center;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:4px;">Schedule a Call</a>
+    </div>
+    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="footer-copy">&copy; 2026 Gabriela Campana</div>
+      <div class="footer-links-new">
+        <a href="https://www.linkedin.com/in/gabriela-campana-9085b732/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:gscampana@gmail.com">Email</a>
+        <a href="https://github.com/GabisCampana" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </footer>
 

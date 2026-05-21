@@ -17,6 +17,20 @@
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="../images/favicon.jpg" rel="shortcut icon" type="image/x-icon">
   <link href="../images/webclip.png" rel="apple-touch-icon">
+  <style>
+    [data-w-id] { opacity: 1 !important; transform: none !important; -webkit-transform: none !important; }
+    .section-cta { background:#000; padding:96px 5%; text-align:center; }
+    .section-cta .cta-overline { font-family:Montserrat,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C9A961; margin-bottom:20px; }
+    .section-cta h2 { font-family:Montserrat,sans-serif; font-size:clamp(32px,5vw,56px); font-weight:700; color:#fff; margin:0 0 16px 0; line-height:1.1; }
+    .section-cta p { font-family:Montserrat,sans-serif; font-size:16px; color:rgba(255,255,255,0.65); margin:0 auto 40px; line-height:1.7; max-width:520px; }
+    .btn-gold { display:inline-block; background:#C9A961; color:#000; font-family:Montserrat,sans-serif; font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:16px 32px; text-decoration:none; }
+    .btn-gold:hover { background:#b8943f; }
+    .footer-new { background:#000; border-top:1px solid rgba(255,255,255,0.08); padding:32px 5%; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+    .footer-new .footer-copy { font-family:Montserrat,sans-serif; font-size:12px; color:rgba(255,255,255,0.35); }
+    .footer-new .footer-links-new { display:flex; gap:28px; }
+    .footer-new .footer-links-new a { font-family:Montserrat,sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5); text-decoration:none; }
+    .footer-new .footer-links-new a:hover { color:#C9A961; }
+  </style>
 </head>
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation w-nav">
@@ -40,6 +54,7 @@
           </div>
           <a href="../styleguide.html" class="navigation-item w-nav-link">Contact</a>
         </nav>
+        <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-weight:700;font-family:Montserrat,sans-serif;font-size:13px;padding:10px 24px;border-radius:4px;text-decoration:none;white-space:nowrap;margin-left:16px;">Schedule a Call</a>
         <div class="menu-button w-nav-button"><img src="../images/menu-icon_1menu-icon.png" width="22" alt="" class="menu-icon"></div>
       </div>
     </div>
@@ -117,12 +132,17 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer-new">
-    <div class="footer-copy">&copy; 2026 Gabriela Campana</div>
-    <div class="footer-links-new">
-      <a href="https://www.linkedin.com/in/gabriela-campana-9085b732/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:gscampana@gmail.com">Email</a>
-      <a href="https://github.com/GabisCampana" target="_blank" rel="noopener">GitHub</a>
+  <footer class="footer-new" style="flex-direction:column;align-items:center;gap:0;">
+    <div style="width:100%;text-align:center;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:4px;">Schedule a Call</a>
+    </div>
+    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="footer-copy">&copy; 2026 Gabriela Campana</div>
+      <div class="footer-links-new">
+        <a href="https://www.linkedin.com/in/gabriela-campana-9085b732/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:gscampana@gmail.com">Email</a>
+        <a href="https://github.com/GabisCampana" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </footer>
 

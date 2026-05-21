@@ -296,6 +296,7 @@
           </div>
           <a href="../styleguide.html" class="navigation-item w-nav-link">Contact</a>
         </nav>
+        <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-weight:700;font-family:Montserrat,sans-serif;font-size:13px;padding:10px 24px;border-radius:4px;text-decoration:none;white-space:nowrap;margin-left:16px;">Schedule a Call</a>
         <div class="menu-button w-nav-button">
           <img src="../images/menu-icon_1menu-icon.png" width="22" alt="" class="menu-icon">
         </div>
@@ -303,31 +304,39 @@
     </div>
   </div>
 
-  <!-- HERO: video background -->
-  <section class="cs-hero" style="position:relative; overflow:hidden; padding:0; min-height:560px; display:flex; align-items:flex-end;">
+  <!-- HERO: video background — clean title only -->
+  <section style="position:relative; overflow:hidden; padding:0; min-height:560px; display:flex; align-items:flex-end;">
     <video autoplay muted loop playsinline
       style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;">
       <source src="../images/cloud-posse-hero.mp4" type="video/mp4">
     </video>
-    <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%); z-index:1;"></div>
-    <div class="cs-hero-inner" style="position:relative; z-index:2; padding:64px 5%; width:100%; max-width:none;">
-      <div>
-        <div class="overline">Case Study</div>
-        <h1>Cloud Posse</h1>
-        <p class="cs-role">Sole Technical Project Manager · May 2023 – March 2026</p>
-      </div>
-      <div class="cs-meta">
-        <div class="cs-meta-item">
-          <div class="meta-label">Company</div>
-          <div class="meta-value">Cloud Posse · AWS Premier Partner<br>DevOps Consultancy · Remote (US)</div>
+    <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 100%); z-index:1;"></div>
+    <div style="position:relative; z-index:2; padding:64px 5%; width:100%;">
+      <div class="overline">Case Study</div>
+      <h1 style="font-family:Montserrat,sans-serif;font-size:clamp(40px,6vw,72px);font-weight:700;color:#fff;line-height:1.05;margin:0 0 12px 0;">Cloud Posse</h1>
+      <p style="font-family:Montserrat,sans-serif;font-size:18px;font-weight:400;color:rgba(255,255,255,0.65);margin:0;">Sole Technical Project Manager · May 2023 – March 2026</p>
+    </div>
+  </section>
+
+  <!-- PROJECT OVERVIEW -->
+  <section style="background:#fff; border-bottom:1px solid #e8e8e8; padding:64px 5%;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#C9A961;margin-bottom:32px;">Project Overview</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#000;border:2px solid #000;">
+        <div style="background:#fff;padding:32px 28px;">
+          <div style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#999;margin-bottom:12px;">Company</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;color:#000;margin-bottom:6px;">Cloud Posse</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:14px;color:#555;line-height:1.6;">AWS Premier Partner<br>DevOps Consultancy · Remote (US)</div>
         </div>
-        <div class="cs-meta-item">
-          <div class="meta-label">My role</div>
-          <div class="meta-value">Sole Technical Project Manager<br>Reporting directly to the CEO</div>
+        <div style="background:#fff;padding:32px 28px;">
+          <div style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#999;margin-bottom:12px;">My Role</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;color:#000;margin-bottom:6px;">Sole Technical Project Manager</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:14px;color:#555;line-height:1.6;">Reporting directly to the CEO</div>
         </div>
-        <div class="cs-meta-item">
-          <div class="meta-label">Scope</div>
-          <div class="meta-value">Delivery, vendor partnerships, AWS Partner Network, operating cadence</div>
+        <div style="background:#fff;padding:32px 28px;">
+          <div style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#999;margin-bottom:12px;">Scope</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;color:#000;margin-bottom:6px;">End-to-End Operations</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:14px;color:#555;line-height:1.6;">Delivery · Vendor partnerships · AWS Partner Network · Operating cadence</div>
         </div>
       </div>
     </div>
@@ -419,12 +428,17 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer-new">
-    <div class="footer-copy">&copy; 2026 Gabriela Campana</div>
-    <div class="footer-links-new">
-      <a href="https://www.linkedin.com/in/gabriela-campana-9085b732/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:gscampana@gmail.com">Email</a>
-      <a href="https://github.com/GabisCampana" target="_blank" rel="noopener">GitHub</a>
+  <footer class="footer-new" style="flex-direction:column;align-items:center;gap:0;">
+    <div style="width:100%;text-align:center;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:4px;">Schedule a Call</a>
+    </div>
+    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="footer-copy">&copy; 2026 Gabriela Campana</div>
+      <div class="footer-links-new">
+        <a href="https://www.linkedin.com/in/gabriela-campana-9085b732/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:gscampana@gmail.com">Email</a>
+        <a href="https://github.com/GabisCampana" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </footer>
 
