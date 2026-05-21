@@ -31,10 +31,19 @@
     .name-text, .heading-jumbo,
     [data-w-id] { opacity: 1 !important; transform: none !important; -webkit-transform: none !important; }
 
+    /* ── Work grid: center cards on single-column mobile view ── */
+    @media (max-width: 479px) {
+      .grid-6 { justify-items: center; }
+      .grid-6 .div-block,
+      .grid-6 > div { width: 100%; max-width: 480px; }
+      .work-description { text-align: center; }
+    }
+
     /* ── Positioning section ── */
     .section-positioning {
       padding: 96px 5%;
       background: #fff;
+      text-align: center;
     }
     .section-positioning .overline {
       font-family: Montserrat, sans-serif;
@@ -51,7 +60,7 @@
       font-weight: 700;
       color: #000;
       line-height: 1.15;
-      margin: 0 0 24px 0;
+      margin: 0 auto 24px auto;
       max-width: 720px;
     }
     .section-positioning p {
@@ -61,7 +70,7 @@
       color: #333;
       line-height: 1.75;
       max-width: 640px;
-      margin: 0 0 36px 0;
+      margin: 0 auto 36px auto;
     }
     .btn-gold {
       display: inline-block;
@@ -272,15 +281,15 @@
       </div>
 
       <div id="w-node-dff26f68-5731-3efa-d3dd-8f65c72d8fbb-502ad5ca">
-        <a href="work/fleo.html" class="w-inline-block">
-          <img src="images/PDP-home-portfolio.jpg" loading="lazy" alt="Fleo New Headless Site"
+        <a href="work/cloud-posse.html" class="w-inline-block">
+          <img src="images/cloud-posse-card.jpg" loading="lazy" alt="Cloud Posse — DevOps Consultancy"
+            onerror="this.onerror=null;this.src='images/PDP-home-portfolio.jpg';"
             sizes="(max-width: 479px) 100vw, (max-width: 1439px) 49vw, (max-width: 5040px) 50vw, 2520px"
-            srcset="images/PDP-home-portfolio-p-500.jpg 500w, images/PDP-home-portfolio-p-800.jpg 800w, images/PDP-home-portfolio-p-1080.jpg 1080w, images/PDP-home-portfolio-p-1600.jpg 1600w, images/PDP-home-portfolio-p-2000.jpg 2000w, images/PDP-home-portfolio.jpg 2520w"
             class="image-2 image-3">
         </a>
         <div class="work-description">
-          <a href="work/fleo.html" class="project-name-link">Fleo New Headless Site</a>
-          <div class="paragraph-light">Project &amp; Account Manager</div>
+          <a href="work/cloud-posse.html" class="project-name-link">Cloud Posse — AWS DevOps</a>
+          <div class="paragraph-light">Technical Project Manager</div>
         </div>
       </div>
 
