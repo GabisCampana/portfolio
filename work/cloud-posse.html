@@ -303,9 +303,14 @@
     </div>
   </div>
 
-  <!-- HERO -->
-  <section class="cs-hero">
-    <div class="cs-hero-inner">
+  <!-- HERO: video background -->
+  <section class="cs-hero" style="position:relative; overflow:hidden; padding:0; min-height:560px; display:flex; align-items:flex-end;">
+    <video autoplay muted loop playsinline
+      style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+      <source src="../images/cloud-posse-hero.mp4" type="video/mp4">
+    </video>
+    <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%); z-index:1;"></div>
+    <div class="cs-hero-inner" style="position:relative; z-index:2; padding:64px 5%; width:100%; max-width:none;">
       <div>
         <div class="overline">Case Study</div>
         <h1>Cloud Posse</h1>
