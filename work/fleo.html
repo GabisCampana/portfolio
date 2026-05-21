@@ -1,123 +1,513 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed May 20 2026 17:23:58 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="6446ddfc18c556b76f2ad5d2" data-wf-site="6446ddfc18c55631832ad5c5">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Project 4</title>
-  <meta content="Project 4" property="og:title">
-  <meta content="Project 4" name="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
-  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="../css/gabi808.webflow.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script>
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <title>Fleo Activewear — Case Study | Gabriela Campana</title>
+  <meta name="description" content="How I led a headless e-commerce migration for Fleo Activewear — managing cross-functional teams, client relationships, and technical delivery from kickoff to launch.">
+  <meta property="og:title" content="Fleo Activewear — Case Study | Gabriela Campana">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../images/favicon.jpg" rel="shortcut icon" type="image/x-icon">
   <link href="../images/webclip.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    [data-w-id] { opacity: 1 !important; transform: none !important; -webkit-transform: none !important; }
-    .section-cta { background:#000; padding:96px 5%; text-align:center; }
-    .section-cta .cta-overline { font-family:Montserrat,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C9A961; margin-bottom:20px; }
-    .section-cta h2 { font-family:Montserrat,sans-serif; font-size:clamp(32px,5vw,56px); font-weight:700; color:#fff; margin:0 0 16px 0; line-height:1.1; }
-    .section-cta p { font-family:Montserrat,sans-serif; font-size:16px; color:rgba(255,255,255,0.65); margin:0 auto 40px; line-height:1.7; max-width:520px; }
-    .btn-gold { display:inline-block; background:#C9A961; color:#000; font-family:Montserrat,sans-serif; font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:16px 32px; text-decoration:none; }
-    .btn-gold:hover { background:#b8943f; }
-    .footer-new { background:#000; border-top:1px solid rgba(255,255,255,0.08); padding:32px 5%; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
-    .footer-new .footer-copy { font-family:Montserrat,sans-serif; font-size:12px; color:rgba(255,255,255,0.35); }
-    .footer-new .footer-links-new { display:flex; gap:28px; }
-    .footer-new .footer-links-new a { font-family:Montserrat,sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5); text-decoration:none; }
-    .footer-new .footer-links-new a:hover { color:#C9A961; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: Montserrat, sans-serif; background: #fff; color: #111; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* ── NAV ── */
+    .navigation { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #000; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 5%; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: #fff; }
+    .nav-cta-btn { display: inline-block; background: #C9A961; color: #000 !important; font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 20px; border-radius: 3px; }
+    .nav-cta-btn:hover { background: #b8943f !important; color: #000 !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: #fff; }
+    .nav-mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #000; border-bottom: 1px solid rgba(255,255,255,0.12); padding: 24px 5% 32px; z-index: 99; flex-direction: column; gap: 20px; }
+    .nav-mobile-menu a { font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+    .nav-mobile-menu a[aria-current="page"] { color: #fff; }
+    .nav-cta-mobile { margin-top: 8px; }
+    .nav-cta-mobile a { display: block; text-align: center; background: #C9A961; color: #000 !important; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 24px; border-radius: 3px; }
+    @media (max-width: 991px) {
+      .nav-links { display: none; }
+      .nav-cta-btn { display: none !important; }
+      .nav-hamburger { display: flex; }
+      .nav-mobile-menu.open { display: flex; }
+    }
+
+    /* ── HERO ── */
+    .cs-hero {
+      margin-top: 64px;
+      height: 540px;
+      background: #111 url('../images/PDP-home-portfolio.jpg') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+    }
+    .cs-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.1) 100%);
+    }
+    .cs-hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 48px 5%;
+      max-width: 900px;
+    }
+    .cs-hero-overline {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C9A961;
+      margin-bottom: 16px;
+    }
+    .cs-hero h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── PROJECT OVERVIEW ── */
+    .cs-overview {
+      background: #000;
+      padding: 56px 5%;
+    }
+    .cs-overview-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: #222;
+    }
+    .cs-overview-card {
+      background: #111;
+      padding: 32px 28px;
+    }
+    .cs-overview-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C9A961;
+      margin-bottom: 10px;
+    }
+    .cs-overview-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+    }
+    @media (max-width: 767px) {
+      .cs-overview-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: #000;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 56px 5%;
+    }
+    .stats-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 800;
+      color: #C9A961;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+    @media (max-width: 767px) {
+      .stats-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── BODY SECTIONS ── */
+    .cs-body { max-width: 1200px; margin: 0 auto; padding: 80px 5%; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C9A961;
+      margin-bottom: 20px;
+    }
+
+    .cs-context {
+      background: #f8f8f8;
+      padding: 80px 5%;
+    }
+    .cs-context-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .cs-context-inner h2 {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: #000;
+      margin-bottom: 24px;
+    }
+    .cs-context-inner p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #444;
+    }
+    .cs-context-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .meta-item {}
+    .meta-item .meta-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C9A961;
+      margin-bottom: 6px;
+    }
+    .meta-item .meta-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: #000;
+      line-height: 1.5;
+    }
+    @media (max-width: 767px) {
+      .cs-context-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .cs-section {
+      padding: 72px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .cs-section:last-child { border-bottom: none; }
+    .cs-section h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .cs-section p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #444;
+      max-width: 720px;
+      margin-bottom: 20px;
+    }
+    .cs-section p:last-of-type { margin-bottom: 0; }
+
+    .cs-deliverables {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cs-deliverables li {
+      list-style: none;
+      padding-left: 20px;
+      position: relative;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .cs-deliverables li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #C9A961;
+      font-weight: 700;
+    }
+
+    /* ── IMAGE GRIDS ── */
+    .img-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: #eee;
+      margin: 48px 0 0;
+    }
+    .img-grid-3 img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .img-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: #eee;
+      margin: 48px 0 0;
+    }
+    .img-grid-2 img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+    @media (max-width: 767px) {
+      .img-grid-3 { grid-template-columns: 1fr; }
+      .img-grid-3 img { height: 220px; }
+      .img-grid-2 { grid-template-columns: 1fr; }
+      .img-grid-2 img { height: 240px; }
+    }
+
+    /* ── TESTIMONIAL ── */
+    .cs-testimonial {
+      background: #000;
+      padding: 80px 5%;
+      text-align: center;
+    }
+    .cs-testimonial blockquote {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.5;
+    }
+    .cs-testimonial blockquote::before { content: '\201C'; color: #C9A961; }
+    .cs-testimonial blockquote::after  { content: '\201D'; color: #C9A961; }
+    .cs-testimonial cite {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      font-style: normal;
+    }
+
+    /* ── CTA ── */
+    .section-cta { background: #000; padding: 96px 5%; text-align: center; }
+    .section-cta .cta-overline { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A961; margin-bottom: 20px; }
+    .section-cta h2 { font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: #fff; margin: 0 0 16px 0; line-height: 1.1; }
+    .section-cta p { font-size: 16px; color: rgba(255,255,255,0.65); margin: 0 auto 40px; line-height: 1.7; max-width: 520px; }
+    .btn-gold { display: inline-block; background: #C9A961; color: #000; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 32px; text-decoration: none; border-radius: 3px; }
+    .btn-gold:hover { background: #b8943f; }
+
+    /* ── FOOTER ── */
+    .footer-new { background: #000; border-top: 1px solid rgba(255,255,255,0.08); padding: 32px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-new .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
+    .footer-new .footer-links-new { display: flex; gap: 28px; }
+    .footer-new .footer-links-new a { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .footer-new .footer-links-new a:hover { color: #fff; }
+    @media (max-width: 600px) {
+      .footer-new { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
-  <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation w-nav">
-    <div class="navigation-items">
-      <a href="../index.html" class="logo-link w-nav-brand"><img src="../images/GABI808-BLACK-and-gold-in-transparent-1200.png" width="104" sizes="(max-width: 479px) 77vw, 104px" srcset="../images/GABI808-BLACK-and-gold-in-transparent-1200-p-500.png 500w, ../images/GABI808-BLACK-and-gold-in-transparent-1200-p-800.png 800w, ../images/GABI808-BLACK-and-gold-in-transparent-1200-p-1080.png 1080w, ../images/GABI808-BLACK-and-gold-in-transparent-1200.png 1200w" alt="" class="logo-image"></a>
-      <div class="navigation-wrap">
-        <nav role="navigation" class="navigation-items w-nav-menu">
-          <a href="../index.html" class="navigation-item w-nav-link">Home</a>
-          <a href="../about.html" class="navigation-item w-nav-link">About</a>
-          <div data-hover="true" data-delay="0" class="dropdown dropdown-mobile w-dropdown">
-            <div class="dropdown-toggle w-dropdown-toggle">
-              <div class="text-block-6">Work</div>
-            </div>
-                        <nav class="dropdown-list w-dropdown-list">
-              <a href="../work/cloud-posse.html" class="dropdown-link-2 w-dropdown-link">Cloud Posse</a>
-              <a href="../work/google-rio-2016-olympics.html" class="dropdown-link-2 w-dropdown-link">Google Rio 2016 Olympics</a>
-              <a href="../work/hexclad.html" class="dropdown-link-3 w-dropdown-link">HexClad E-commerce Website</a>
-              <a href="../work/nomad.html" class="dropdown-link-4 w-dropdown-link">Nomad Headless E-commerce</a>
-              <a href="../work/fleo.html" class="dropdown-link-5 w-dropdown-link">FLEO Headless E-commerce</a>
-            </nav>
-          </div>
-          <a href="../styleguide.html" class="navigation-item w-nav-link">Contact</a>
-        </nav>
-        <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-weight:700;font-family:Montserrat,sans-serif;font-size:13px;padding:10px 24px;border-radius:4px;text-decoration:none;white-space:nowrap;margin-left:16px;">Schedule a Call</a>
-        <div class="menu-button w-nav-button"><img src="../images/menu-icon_1menu-icon.png" width="22" alt="" class="menu-icon"></div>
+
+  <!-- NAV -->
+  <nav class="navigation">
+    <a href="../index.html" class="nav-logo">Gabriela Campana</a>
+    <div class="nav-links">
+      <a href="../index.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" class="nav-cta-btn">Schedule a Call</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="../index.html">Work</a>
+    <a href="../about.html">About</a>
+    <div class="nav-cta-mobile">
+      <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank">Schedule a Call</a>
+    </div>
+  </div>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+
+  <!-- HERO -->
+  <section class="cs-hero">
+    <div class="cs-hero-content">
+      <div class="cs-hero-overline">Project Manager · Sep 2021 – Feb 2022</div>
+      <h1>Fleo Activewear</h1>
+    </div>
+  </section>
+
+  <!-- PROJECT OVERVIEW -->
+  <section class="cs-overview">
+    <div class="cs-overview-grid">
+      <div class="cs-overview-card">
+        <div class="cs-overview-label">Client</div>
+        <div class="cs-overview-value">Fleo Activewear</div>
+      </div>
+      <div class="cs-overview-card">
+        <div class="cs-overview-label">Role</div>
+        <div class="cs-overview-value">Project Manager at The Form Factory</div>
+      </div>
+      <div class="cs-overview-card">
+        <div class="cs-overview-label">Project</div>
+        <div class="cs-overview-value">Headless E-commerce Migration</div>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="container container-fleo-header">
-      <h1 data-w-id="0befc76b-828c-2822-f9fa-f2c6de040bc0" style="-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="heading-jumbo">Fleo</h1>
-      <div data-w-id="0befc76b-828c-2822-f9fa-f2c6de040bc2" style="opacity:0;-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="paragraph-light nomad-subheading">Project &amp; Account Management</div>
-      <div data-w-id="1f85730f-9889-a71b-9be8-c086a8d10765" style="opacity:0;-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="paragraph-tiny cc-paragraph-tiny-light nomad-period">Sep 2021 — Feb 2022<br></div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Team Members Managed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5mo</div>
+        <div class="stat-label">Delivery Timeline</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Deadline Slips</div>
+      </div>
     </div>
-  </div>
-  <div><img class="image-3" src="../images/PDP-home-portfolio.jpg" alt="" style="opacity:0;-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" sizes="(max-width: 2520px) 100vw, 2520px" data-w-id="78ff9f84-1ed0-0294-2a74-0cf2c7355030" loading="lazy" srcset="../images/PDP-home-portfolio-p-500.jpg 500w, ../images/PDP-home-portfolio-p-800.jpg 800w, ../images/PDP-home-portfolio-p-1080.jpg 1080w, ../images/PDP-home-portfolio-p-1600.jpg 1600w, ../images/PDP-home-portfolio-p-2000.jpg 2000w, ../images/PDP-home-portfolio.jpg 2520w"></div>
-  <div class="section">
-    <div class="container">
-      <div class="w-layout-grid project-overview-grid">
-        <div id="w-node-_0befc76b-828c-2822-f9fa-f2c6de040bc4-6f2ad5d2">
-          <div data-w-id="0befc76b-828c-2822-f9fa-f2c6de040bc5" style="opacity:0;-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="position-name-text">Project Overview</div>
-          <div data-w-id="0befc76b-828c-2822-f9fa-f2c6de040bc7" style="opacity:0;-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="paragraph-light cc-position-name">Fleo wanted to move to a headless storefront because of site speed and creative flexibility. As an activewear brand, it was crucial to include high-quality imagery of their apparel in use across the site without hits to performance. Using Shogun Frontend, Form Factory built a super responsive site equipped to handle advanced functionality. A great example is FLEO&#x27;s collection and product pages that instantly check real-time inventory across hundreds of variants to show customers which colourful prints are available in their size. </div>
+  </section>
+
+  <!-- CONTEXT -->
+  <section class="cs-context">
+    <div class="cs-context-inner">
+      <div>
+        <div class="section-label">Context</div>
+        <h2>Leading a complex migration from legacy to headless</h2>
+        <p>Fleo Activewear needed to move from their legacy Shopify setup to a fully headless storefront powered by Shogun Frontend. This was a technically complex, multi-team migration requiring close coordination between client stakeholders, a designer, and five developers — all while keeping the business running smoothly.</p>
+        <p>I was brought in by The Form Factory as Project Manager to own delivery end-to-end: planning, resourcing, client communication, and cross-functional execution across the full 5-month project lifecycle.</p>
+      </div>
+      <div class="cs-context-meta">
+        <div class="meta-item">
+          <div class="meta-label">Agency</div>
+          <div class="meta-value">The Form Factory</div>
         </div>
-        <div id="w-node-_0befc76b-828c-2822-f9fa-f2c6de040bc9-6f2ad5d2">
-          <div data-w-id="0befc76b-828c-2822-f9fa-f2c6de040bca" style="opacity:0;-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="position-name-text">My Contributions</div>
-          <div data-w-id="0befc76b-828c-2822-f9fa-f2c6de040bcc" style="opacity:0;-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="paragraph-light cc-position-name">I led the delivery of the Fleo headless store, where I managed a UX/UI designer team and five developers. By migrating projects from GitHub to Jira, implementing SCRUM, building team morale, and working more hours in the weeks before and after launch, I delivered the project on time with outstanding quality. The client was delighted with my services, the new store features, and the site speed.</div>
+        <div class="meta-item">
+          <div class="meta-label">Timeline</div>
+          <div class="meta-value">Sep 2021 – Feb 2022</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Team Size</div>
+          <div class="meta-value">1 Designer + 5 Developers</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Stack</div>
+          <div class="meta-value">Shogun Frontend (Headless), Shopify</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Tools</div>
+          <div class="meta-value">Jira, GitHub, Slack, Figma</div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="w-container"><img class="detail-image image-3" src="../images/Fleo-Shop-the-look.png" width="920" alt="" style="opacity:0;-webkit-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" sizes="(max-width: 479px) 94vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, (max-width: 1439px) 94vw, 940px" data-w-id="2f79b287-a341-00fa-d8dd-57f5b510f182" srcset="../images/Fleo-Shop-the-look-p-500.png 500w, ../images/Fleo-Shop-the-look-p-800.png 800w, ../images/Fleo-Shop-the-look-p-1080.png 1080w, ../images/Fleo-Shop-the-look-p-1600.png 1600w, ../images/Fleo-Shop-the-look-p-2000.png 2000w, ../images/Fleo-Shop-the-look.png 2271w"></div>
-    <div class="w-container"><img src="../images/Fleo-PLP.png" width="920" sizes="(max-width: 479px) 94vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, (max-width: 1439px) 94vw, 940px" srcset="../images/Fleo-PLP-p-500.png 500w, ../images/Fleo-PLP-p-800.png 800w, ../images/Fleo-PLP-p-1080.png 1080w, ../images/Fleo-PLP-p-1600.png 1600w, ../images/Fleo-PLP-p-2000.png 2000w, ../images/Fleo-PLP.png 2511w" alt="" class="detail-image nomad-2nd-image fleo-2nd-image image-3"></div>
-    <div class="w-container"><img src="../images/Fleo-quiz.png" width="920" sizes="(max-width: 479px) 94vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, (max-width: 1439px) 94vw, 940px" srcset="../images/Fleo-quiz-p-500.png 500w, ../images/Fleo-quiz-p-800.png 800w, ../images/Fleo-quiz-p-1080.png 1080w, ../images/Fleo-quiz-p-1600.png 1600w, ../images/Fleo-quiz-p-2000.png 2000w, ../images/Fleo-quiz.png 2511w" alt="" class="detail-image nomad-2nd-image fleo-2nd-image image-3"></div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="email-section">
-        <h3 class="heading-4">Want to work together?</h3>
-        <p class="paragraph-4">If you like what you see and want to work together, get in touch!</p>
-        <a href="mailto:gscampana@gmail.com?subject=Let&#x27;s%20work%20together!" class="email-link">gscampana@gmail.com</a>
+  </section>
+
+  <!-- WORK SECTIONS -->
+  <div class="cs-body">
+
+    <!-- Section 1 -->
+    <section class="cs-section">
+      <div class="section-label">Team & Delivery Management</div>
+      <h2>Structured chaos into a working system</h2>
+      <p>When I joined, the team was using GitHub issues as the sole project tracking tool — adequate for dev but not for cross-functional visibility or client reporting. I migrated the entire workflow to Jira and implemented SCRUM: two-week sprints, daily standups, sprint reviews, and retrospectives.</p>
+      <p>This gave the team a shared source of truth, made blockers visible early, and created a rhythm the client could follow. The result: a project that stayed on schedule across a 5-month engagement with a six-person cross-functional team.</p>
+      <ul class="cs-deliverables">
+        <li>Migrated project tracking from GitHub Issues to Jira</li>
+        <li>Implemented SCRUM with 2-week sprints, standups, and retrospectives</li>
+        <li>Managed 1 designer and 5 developers across the full project lifecycle</li>
+        <li>Maintained sprint velocity and flagged scope risks before they became delays</li>
+      </ul>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="cs-section">
+      <div class="section-label">Client Management</div>
+      <h2>Kept the client informed and in control</h2>
+      <p>Fleo's stakeholders were non-technical, but they needed confidence in a technically complex migration. I owned the client relationship throughout: weekly status calls, structured progress reports, and clear escalation paths when decisions were needed.</p>
+      <p>Rather than shielding the client from complexity, I translated it — turning sprint updates into business-relevant milestones they could track and approve. This built trust and reduced scope creep caused by last-minute surprises.</p>
+      <ul class="cs-deliverables">
+        <li>Ran weekly client calls with structured agendas and decision logs</li>
+        <li>Produced clear progress reports tied to business milestones, not dev tasks</li>
+        <li>Managed scope changes through a formal change request process</li>
+        <li>Resolved client concerns before they escalated into project risks</li>
+      </ul>
+
+      <div class="img-grid-2">
+        <img src="../images/Fleo-Shop-the-look.png" alt="Fleo Shop the Look feature" loading="lazy">
+        <img src="../images/Fleo-PLP.png" alt="Fleo Product Listing Page" loading="lazy">
       </div>
-    </div>
+    </section>
+
   </div>
-  
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6446ddfc18c55631832ad5c5" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="../js/webflow.js" type="text/javascript"></script>
+
+  <!-- TESTIMONIAL -->
+  <section class="cs-testimonial">
+    <blockquote>Delivered on time with outstanding quality. The migration was complex, but Gabriela kept everything organized and moving forward throughout.</blockquote>
+    <cite>Fleo Activewear via The Form Factory · 2022</cite>
+  </section>
+
+  <!-- Section 3 (Technical Coordination) -->
+  <div class="cs-body">
+    <section class="cs-section">
+      <div class="section-label">Technical Coordination</div>
+      <h2>Bridging product vision and technical execution</h2>
+      <p>A headless migration involves architectural decisions that ripple across the entire storefront — routing, content modeling, API integrations, and performance. I served as the bridge between Fleo's product requirements and the technical team's execution, ensuring nothing got lost in translation.</p>
+      <p>I owned backlog grooming, acceptance criteria, and QA sign-off — making sure every delivered feature matched both the design specifications and the client's business intent before it went live.</p>
+      <ul class="cs-deliverables">
+        <li>Owned backlog grooming and acceptance criteria across all feature tracks</li>
+        <li>Coordinated frontend, backend, and CMS work streams simultaneously</li>
+        <li>Ran QA cycles and sign-off process before each release</li>
+        <li>Managed the Shogun Frontend configuration and Shopify integration dependencies</li>
+      </ul>
+
+      <div class="img-grid-2" style="grid-template-columns: 1fr;">
+        <img src="../images/Fleo-quiz.png" alt="Fleo Quiz feature" loading="lazy" style="height:380px; object-fit:cover; width:100%;">
+      </div>
+    </section>
+  </div>
+
   <!-- CTA -->
   <section class="section-cta">
-    <div class="cta-overline">Let's connect</div>
-    <h2>Let's Talk</h2>
-    <p>Whether you're hiring for a senior ops role or looking for a strategic partner — I'd love to hear about it.</p>
-    <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" class="btn-gold">Schedule a 30-min Call</a>
+    <div class="cta-overline">Let's Work Together</div>
+    <h2>Ready to build something?</h2>
+    <p>Whether you need an ops leader, a project partner, or someone to run the machine — I'm available for the right opportunity.</p>
+    <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" class="btn-gold">Schedule a Call</a>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer-new" style="flex-direction:column;align-items:center;gap:0;">
-    <div style="width:100%;text-align:center;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.08);">
-      <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;text-decoration:none;border-radius:4px;">Schedule a Call</a>
-    </div>
-    <div style="width:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
-      <div class="footer-copy">&copy; 2026 Gabriela Campana</div>
-      <div class="footer-links-new">
-        <a href="https://www.linkedin.com/in/gabriela-campana-9085b732/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:gscampana@gmail.com">Email</a>
-        <a href="https://github.com/GabisCampana" target="_blank" rel="noopener">GitHub</a>
-      </div>
+  <footer class="footer-new">
+    <span class="footer-copy">© 2026 Gabriela Campana</span>
+    <div class="footer-links-new">
+      <a href="https://linkedin.com/in/gabrielacampana" target="_blank">LinkedIn</a>
+      <a href="mailto:gscampana@gmail.com">Email</a>
+      <a href="../index.html">Work</a>
     </div>
   </footer>
 

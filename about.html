@@ -388,6 +388,12 @@
       text-decoration: none;
     }
     .footer-new .footer-links-new a:hover { color: #C9A961; }
+    .nav-cta-btn { display: inline-block; }
+    @media (max-width: 991px) {
+      .nav-cta-btn { display: none !important; }
+      .nav-cta-mobile { display: block; text-align: center; padding: 16px 20px 8px; }
+      .nav-cta-mobile a { display: block; background: #C9A961; color: #000; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 24px; text-decoration: none; border-radius: 4px; }
+    }
   </style>
 </head>
 <body>
@@ -418,8 +424,9 @@
             </nav>
           </div>
           <a href="styleguide.html" class="navigation-item w-nav-link">Contact</a>
+          <div class="nav-cta-mobile"><a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener">Schedule a Call</a></div>
         </nav>
-        <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" style="background:#C9A961;color:#000;font-weight:700;font-family:Montserrat,sans-serif;font-size:13px;padding:10px 24px;border-radius:4px;text-decoration:none;white-space:nowrap;margin-left:16px;">Schedule a Call</a>
+        <a href="https://calendar.app.google/zGd7rJBScxkFNqM7A" target="_blank" rel="noopener" class="nav-cta-btn" style="background:#C9A961;color:#000;font-weight:700;font-family:Montserrat,sans-serif;font-size:13px;padding:10px 24px;border-radius:4px;text-decoration:none;white-space:nowrap;margin-left:16px;">Schedule a Call</a>
         <div class="menu-button w-nav-button">
           <img src="images/menu-icon_1menu-icon.png" width="22" alt="" class="menu-icon">
         </div>
@@ -498,12 +505,12 @@
         <div class="timeline-item">
           <div class="tl-period">2016 – 2021</div>
           <div class="tl-role">Founder &amp; Digital Marketing</div>
-          <div class="tl-company">GABI808 · Own Agency · São Paulo</div>
+          <div class="tl-company">GABI808 · Own Agency · Litoral Norte, SP</div>
         </div>
 
         <div class="timeline-item">
           <div class="tl-period">Jul 2015 – Jul 2016</div>
-          <div class="tl-role">Digital Production Manager</div>
+          <div class="tl-role">Interactive Producer</div>
           <div class="tl-company">Google Brazil · Rio 2016 Olympics</div>
         </div>
 
