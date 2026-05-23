@@ -169,30 +169,74 @@
       padding-top: 2px;
     }
 
-    /* ── Testimonial ── */
-    .about-testimonial {
+    /* ── Testimonials grid ── */
+    .about-testimonials {
+      background: #000;
       padding: 80px 5%;
-      max-width: 900px;
+    }
+    .about-testimonials-inner {
+      max-width: 1200px;
       margin: 0 auto;
-      text-align: center;
     }
-    .about-testimonial blockquote {
+    .about-testimonials .section-label {
       font-family: Montserrat, sans-serif;
-      font-size: clamp(18px, 2.5vw, 26px);
-      font-weight: 600;
-      color: #000;
-      line-height: 1.5;
-      margin: 0 0 24px 0;
-      font-style: normal;
-    }
-    .about-testimonial cite {
-      font-family: Montserrat, sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #C9A961;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    @media (max-width: 767px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+    .testimonial-card {
+      background: #111;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .testimonial-card .t-quote-mark {
+      font-family: Georgia, serif;
+      font-size: 48px;
+      line-height: 1;
+      color: #C9A961;
+      margin-bottom: -12px;
+    }
+    .testimonial-card blockquote {
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.75;
+      margin: 0;
       font-style: normal;
+      flex: 1;
+    }
+    .testimonial-card .t-attribution {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+    }
+    .testimonial-card .t-name {
+      font-family: Montserrat, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .testimonial-card .t-role {
+      font-family: Montserrat, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #C9A961;
+      letter-spacing: 0.05em;
     }
 
     /* ── Trusted by ── */
@@ -546,10 +590,41 @@
     </div>
   </section>
 
-  <!-- TESTIMONIAL -->
-  <section class="about-testimonial">
-    <blockquote>"Gabriela is an outstanding technical project manager who consistently exceeds expectations."</blockquote>
-    <cite>Erik Osterman, CEO — Cloud Posse</cite>
+  <!-- TESTIMONIALS -->
+  <section class="about-testimonials">
+    <div class="about-testimonials-inner">
+      <div class="section-label">What colleagues say</div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="t-quote-mark">"</div>
+          <blockquote>Gabriela brought new perspectives, passion and energy to work. She's a strong and resilient professional who's always pushing the boundaries of whatever she's doing — trustworthy, reliable, and a genuine asset to any team.</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">Felipe Morales</div>
+            <div class="t-role">Creative Director · Google Brazil</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="t-quote-mark">"</div>
+          <blockquote>A skilled professional, fast learner, and team player with great potential to navigate between design, development, management and responsible thinking — exactly what the new reality of communication demands.</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">Fernanda Cerávolo</div>
+            <div class="t-role">Director of YouTube · Google Brazil</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="t-quote-mark">"</div>
+          <blockquote>Gabriela is an outstanding technical project manager who consistently exceeds expectations.</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">Erik Osterman</div>
+            <div class="t-role">CEO · Cloud Posse</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- TRUSTED BY -->
