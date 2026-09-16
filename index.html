@@ -57,11 +57,10 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      background: #000;
+      gap: 28px;
     }
     @media (max-width: 767px) {
-      .practice-grid { grid-template-columns: 1fr; }
+      .practice-grid { grid-template-columns: 1fr; gap: 20px; }
     }
     .practice-card {
       background: #000;
@@ -69,6 +68,7 @@
       text-decoration: none;
       display: block;
       text-align: center;
+      border: 1px solid rgba(0,0,0,0.08);
     }
     .practice-card .practice-stat {
       font-family: Montserrat, sans-serif;
