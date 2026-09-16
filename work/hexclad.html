@@ -243,10 +243,12 @@
     </div>
   </div>
 
-  <!-- HERO: static image -->
+  <!-- HERO: video background -->
   <section class="cs-hero-img">
-    <img src="../images/HexClad--Home-Portfolio.jpg" alt="HexClad Website Redesign"
-      srcset="../images/HexClad--Home-Portfolio-p-800.jpg 800w, ../images/HexClad--Home-Portfolio-p-1600.jpg 1600w, ../images/HexClad--Home-Portfolio.jpg 2520w">
+    <video autoplay muted loop playsinline
+      style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+      <source src="../images/hexclad-hero.mp4" type="video/mp4">
+    </video>
     <div class="hero-overlay"></div>
     <div class="hero-text">
       <div class="overline">Case Study</div>
@@ -322,6 +324,16 @@
         <li>Researched and recommended solutions (custom or off-shelf) for client UX needs</li>
         <li>Solved UX and design challenges in collaboration with design and dev teams</li>
       </ul>
+    </section>
+
+    <section class="cs-section">
+      <div class="section-label">Final Site</div>
+      <h2>A walkthrough of the finished site</h2>
+      <p>The final HexClad site, live and in dark mode.</p>
+      <video controls playsinline poster="../images/HexClad--Home-Portfolio.jpg"
+        style="width:100%; display:block; margin-top:32px; background:#000;">
+        <source src="../images/hexclad-website-walkthrough.mp4" type="video/mp4">
+      </video>
     </section>
 
   </div>
