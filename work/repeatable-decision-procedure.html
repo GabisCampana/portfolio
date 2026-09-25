@@ -39,6 +39,10 @@
     .cs-section h2 { font-family:Montserrat,sans-serif; font-size:clamp(22px,3vw,32px); font-weight:700; color:#000; margin:0 0 16px 0; line-height:1.2; }
     .cs-section p { font-family:Montserrat,sans-serif; font-size:15px; color:#333; line-height:1.85; margin:0 0 24px 0; max-width:760px; }
 
+        .cs-figure { margin:0 0 32px 0; }
+    .cs-figure img { display:block; width:100%; height:auto; border:2px solid #000; }
+    .cs-figure figcaption { font-family:Montserrat,sans-serif; font-size:12px; color:#777; margin-top:10px; letter-spacing:0.02em; }
+
     .cs-deliverables { list-style:none; padding:0; margin:0 0 24px 0; }
     .cs-deliverables li { font-family:Montserrat,sans-serif; font-size:14px; color:#333; line-height:1.7; padding:8px 0 8px 20px; border-bottom:1px solid #f0f0f0; position:relative; }
     .cs-deliverables li::before { content:'—'; position:absolute; left:0; color:#C9A961; font-weight:700; }
@@ -186,6 +190,13 @@
       <div class="section-label">The Procedure</div>
       <h2>Two tracks, never blended into one gut call</h2>
       <p>Client and deal risk (payment history, hire rate, review signal) is assessed separately from actual capability fit, checked against a verified record of real, demonstrated work. Any screening question I can't honestly back up is a hard skip, not a workaround. The decision, and the reasoning behind it, gets logged every time.</p>
+      <figure class="cs-figure">
+        <img src="../images/case-decision-workflow-illustration.jpg"
+             srcset="../images/case-decision-workflow-illustration-p-500.jpg 500w, ../images/case-decision-workflow-illustration-p-800.jpg 800w, ../images/case-decision-workflow-illustration-p-1080.jpg 1080w, ../images/case-decision-workflow-illustration.jpg 1920w"
+             sizes="(max-width: 767px) 92vw, 1080px" width="1920" height="1080" loading="lazy"
+             alt="Illustration of an automated workflow: five dark glass nodes connected in a row, with the decision step marked by a gold check.">
+        <figcaption>Illustration: a decision step inside a workflow. Not a screenshot.</figcaption>
+      </figure>
       <ul class="cs-deliverables">
         <li>Client and deal risk assessed on its own, before anything else</li>
         <li>Skill fit checked against a verified record, never an optimistic guess</li>

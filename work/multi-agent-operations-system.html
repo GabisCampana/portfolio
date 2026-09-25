@@ -39,6 +39,10 @@
     .cs-section h2 { font-family:Montserrat,sans-serif; font-size:clamp(22px,3vw,32px); font-weight:700; color:#000; margin:0 0 16px 0; line-height:1.2; }
     .cs-section p { font-family:Montserrat,sans-serif; font-size:15px; color:#333; line-height:1.85; margin:0 0 24px 0; max-width:760px; }
 
+        .cs-figure { margin:0 0 32px 0; }
+    .cs-figure img { display:block; width:100%; height:auto; border:2px solid #000; }
+    .cs-figure figcaption { font-family:Montserrat,sans-serif; font-size:12px; color:#777; margin-top:10px; letter-spacing:0.02em; }
+
     .cs-deliverables { list-style:none; padding:0; margin:0 0 24px 0; }
     .cs-deliverables li { font-family:Montserrat,sans-serif; font-size:14px; color:#333; line-height:1.7; padding:8px 0 8px 20px; border-bottom:1px solid #f0f0f0; position:relative; }
     .cs-deliverables li::before { content:'—'; position:absolute; left:0; color:#C9A961; font-weight:700; }
@@ -186,6 +190,13 @@
       <div class="section-label">The Architecture</div>
       <h2>One routing point, specialists with written scopes</h2>
       <p>Every request goes through a single coordinator that clarifies the ask, picks the right specialist, and briefs them. Each specialist works under a written scope defining what it does, what it refuses, and what it produces. Memory persists across sessions, so work resumes from a log instead of starting cold.</p>
+      <figure class="cs-figure">
+        <img src="../images/case-multi-agent-workflow-illustration.jpg"
+             srcset="../images/case-multi-agent-workflow-illustration-p-500.jpg 500w, ../images/case-multi-agent-workflow-illustration-p-800.jpg 800w, ../images/case-multi-agent-workflow-illustration-p-1080.jpg 1080w, ../images/case-multi-agent-workflow-illustration.jpg 1920w"
+             sizes="(max-width: 767px) 92vw, 1080px" width="1920" height="1080" loading="lazy"
+             alt="Illustration of an AI agent workflow: five dark glass nodes connected in a row, with the processing step lit in gold.">
+        <figcaption>Illustration: an agent workflow, from input to output. Not a screenshot of the system.</figcaption>
+      </figure>
       <ul class="cs-deliverables">
         <li>One routing point for every incoming request: nothing dropped, nothing double-handled</li>
         <li>Specialists with written scopes, kept in their lane by contract, not by hope</li>
